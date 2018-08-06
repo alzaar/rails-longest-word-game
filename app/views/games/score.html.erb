@@ -1,0 +1,23 @@
+<h1>Your Score</h1>
+
+<table>
+  <tr>
+    <td>Your word:</td>
+    <td><%= @guess %></td>
+  </tr>
+  <tr>
+    <td>Time taken to answer:</td>
+    <td><%= @time_taken %></td>
+  </tr>
+  <tr>
+    <td>Your score:</td>
+    <td><%= @score %></td>
+  </tr>
+  <tr>
+    <td>Message:</td>
+    <td><%= @message %></td>
+  </tr>
+</table>
+
+<h2>Your total score is: <%= @total_score %></h2>
+<%= link_to "Play again", root_path %>

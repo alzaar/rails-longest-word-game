@@ -1,0 +1,20 @@
+<h1>Play a new game</h1>
+
+<form id="grid" action="" method="">
+  <input type="text" name="number" placeholder="How many letters?">
+  <input type="submit" value="Submit">
+</form>
+
+<br>
+<p>Make a word from these letters:</p>
+<h2><%= @grid %></h2>
+<% start_time = Time.now %>
+
+<form action="score" method="GET">
+  <input type="text" name="guess" placeholder="What's your guess?">
+  <input type="submit" value="Submit">
+  <input type="hidden" name="start_time" value="<%= start_time %>">
+  <input type="hidden" name="grid" value= "<%= @grid.join %>">
+</form>
+
+<h2>Your total score is: <%= @total_score %></h2>
